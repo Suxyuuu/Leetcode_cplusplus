@@ -16,7 +16,7 @@ public:
         {
             return false;
         }
-        vector<vector<bool>> dp(m + 1, vector<bool>(n + 1, false));
+        vector<vector<bool>> dp(2, vector<bool>(n + 1, false));
 
         dp[0][0] = true;
 
@@ -26,15 +26,15 @@ public:
             {
                 if (i > 0)
                 {
-                    dp[i][j] = dp[i][j] || (dp[i - 1][j] && (s1[i - 1] == s3[i + j - 1]));
+                    dp[i % 2][j] = dp[(i - 1) % 2][j] && (s1[i - 1] == s3[i + j - 1]);
                 }
                 if (j > 0)
                 {
-                    dp[i][j] = dp[i][j] || (dp[i][j - 1] && (s2[j - 1] == s3[i + j - 1]));
+                    dp[i % 2][j] = dp[i % 2][j] || (dp[i % 2][j - 1] && (s2[j - 1] == s3[i + j - 1]));
                 }
             }
         }
-        return dp[m][n];
+        return dp[m % 2][n];
     }
 };
 // @lc code=end
