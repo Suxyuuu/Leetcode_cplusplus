@@ -5,4 +5,5 @@
 
 + 2022.10.19: Yesterday I have AC one question and submitted on `Leetcode`, but I forgotted to push it to this repository. 😭😭😭 
 + 2022.12.09: Yesterday I was very busy. Emmmm, all right, I forgot it.
-+ 2022.12.12：Forgot again！ 
++ 2022.12.12：Forgot again！
++ 2023.1.12：Yesterday I'm not busy, but I forgot it totally......
